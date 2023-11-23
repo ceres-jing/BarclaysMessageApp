@@ -20,9 +20,8 @@ public class MessageControllerSomeSpringTest {
     MessageService mockMessageService;
     @Test
     public void getObjectsFromContextAndTestBehavior(){
-        List<Message> messages = uut.getAllMessages();
-        verify(mockMessageService, times(1)).getAllMessages();
-
+        Iterable<Message> messages = uut.getMessage();
+        verify(mockMessageService, times(1)).findAll();
 
 
 
